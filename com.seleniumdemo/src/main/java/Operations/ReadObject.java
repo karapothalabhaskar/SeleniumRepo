@@ -64,7 +64,7 @@ public class ReadObject
 	public Properties getObjectRepository(String fileName) throws IOException
 	{		 
 		//Set the path of folder for which you wish to list name of all the files stored
-			File file = new File("D:\\selenium Projects\\java projects\\Current_Release\\Object Properties");// Object files contains all the files under the selected folder
+			File file = new File("D:\\Git\\SeleniumRepo\\com.seleniumdemo\\Object Properties");// Object files contains all the files under the selected folder
 			
 			File[] files = file.listFiles();//for each file in the folder
 			 outerLoop://Label
@@ -75,7 +75,7 @@ public class ReadObject
 				{					
 					if (sf.getName().contains(fileName))
 					{
-						InputStream stream = new FileInputStream("D:\\selenium Projects\\java projects\\Current_Release\\Object Properties\\"+f.getName()+"\\"+sf.getName());
+						InputStream stream = new FileInputStream("D:\\Git\\SeleniumRepo\\com.seleniumdemo\\Object Properties\\"+f.getName()+"\\"+sf.getName());
 						allProperties.load(stream);
 						break  outerLoop;					
 					}
